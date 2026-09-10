@@ -5,13 +5,6 @@ import { useRef } from "react";
 import { EASE, RevealWords } from "./motion";
 import { Radar } from "./radar";
 
-const STATS = [
-  { value: "42", unit: "hr", label: "On-station endurance" },
-  { value: "1,900", unit: "km", label: "Combat radius" },
-  { value: "SEA 5", unit: "", label: "Launch & recovery" },
-  { value: "12+", unit: "", label: "Airframes per swarm" },
-];
-
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -87,17 +80,17 @@ export function Hero() {
               className="mt-11 flex flex-wrap items-center gap-4"
             >
               <a
-                href="#platform"
+                href="#contact"
                 className="group relative overflow-hidden bg-foam px-7 py-3.5 font-mono text-[11px] tracking-[0.2em] text-abyss uppercase transition-colors hover:text-foam"
               >
-                <span className="relative z-10">Explore the platform</span>
+                <span className="relative z-10">Request a brief</span>
                 <span className="absolute inset-0 -translate-y-full bg-signal-deep transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
               </a>
               <a
-                href="#contact"
+                href="mailto:info@laythaero.com"
                 className="group flex items-center gap-2.5 px-1 font-mono text-[11px] tracking-[0.2em] text-mist uppercase transition-colors hover:text-foam"
               >
-                Talk to our team
+                info@laythaero.com
                 <span className="transition-transform duration-500 group-hover:translate-x-1.5">
                   →
                 </span>
@@ -119,28 +112,6 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* stat rail */}
-        <motion.dl
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE, delay: 1.45 }}
-          className="mt-20 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-line pt-8 lg:mt-24 lg:grid-cols-4"
-        >
-          {STATS.map((s) => (
-            <div key={s.label}>
-              <dt className="font-mono text-[9.5px] tracking-[0.2em] text-mist/70 uppercase">
-                {s.label}
-              </dt>
-              <dd className="mt-2.5 font-light text-[clamp(1.6rem,3vw,2.3rem)] tracking-tight text-foam">
-                {s.value}
-                {s.unit ? (
-                  <span className="ml-1 text-base text-mist">{s.unit}</span>
-                ) : null}
-              </dd>
-            </div>
-          ))}
-        </motion.dl>
       </motion.div>
     </section>
   );
