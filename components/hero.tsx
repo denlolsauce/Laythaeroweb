@@ -9,7 +9,7 @@ const STATS = [
   { value: "42", unit: "hr", label: "On-station endurance" },
   { value: "1,900", unit: "km", label: "Combat radius" },
   { value: "SEA 5", unit: "", label: "Launch & recovery" },
-  { value: "24/7", unit: "", label: "Persistent coverage" },
+  { value: "12+", unit: "", label: "Airframes per swarm" },
 ];
 
 export function Hero() {
@@ -75,8 +75,9 @@ export function Hero() {
               className="mt-9 max-w-xl text-[1.0625rem] leading-relaxed text-mist"
             >
               Layth Aero builds long-endurance autonomous aircraft that launch from
-              the deck of any vessel and hold station for days — turning open water
-              into a monitored, understood, and defensible domain.
+              the deck of any vessel and operate in coordinated swarms, holding
+              station for days — turning open water into a monitored, understood,
+              and defensible domain.
             </motion.p>
 
             <motion.div

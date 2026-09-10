@@ -5,17 +5,9 @@ import { useState } from "react";
 import { EASE } from "./motion";
 import { Mark } from "./mark";
 
-const LINKS = [
-  { href: "#platform", label: "Platform" },
-  { href: "#capability", label: "Capability" },
-  { href: "#autonomy", label: "Autonomy" },
-  { href: "#company", label: "Company" },
-];
-
 export function Nav() {
   const { scrollY } = useScroll();
   const [solid, setSolid] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (v) => setSolid(v > 24));
 
@@ -41,65 +33,14 @@ export function Nav() {
             </span>
           </a>
 
-          <div className="hidden items-center gap-9 md:flex">
-            {LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="group relative font-mono text-[11px] tracking-[0.18em] text-mist uppercase transition-colors hover:text-foam"
-              >
-                {l.label}
-                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-signal transition-all duration-500 group-hover:w-full" />
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="border border-line px-4 py-2 font-mono text-[11px] tracking-[0.18em] text-foam uppercase transition-all duration-300 hover:border-signal/60 hover:bg-signal/5 hover:text-signal"
-            >
-              Request Brief
-            </a>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => setOpen((o) => !o)}
-            aria-expanded={open}
-            aria-label="Toggle navigation"
-            className="flex size-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          <a
+            href="#contact"
+            className="border border-line px-4 py-2 font-mono text-[11px] tracking-[0.18em] text-foam uppercase transition-all duration-300 hover:border-signal/60 hover:bg-signal/5 hover:text-signal"
           >
-            <span
-              className={`h-px w-5 bg-foam transition-transform duration-300 ${
-                open ? "translate-y-[3.5px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`h-px w-5 bg-foam transition-transform duration-300 ${
-                open ? "-translate-y-[3.5px] -rotate-45" : ""
-              }`}
-            />
-          </button>
+            Request Brief
+          </a>
         </nav>
       </div>
-
-      <motion.div
-        initial={false}
-        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.45, ease: EASE }}
-        className="overflow-hidden border-b border-line bg-abyss/95 backdrop-blur-xl md:hidden"
-      >
-        <div className="flex flex-col px-6 py-4">
-          {[...LINKS, { href: "#contact", label: "Request Brief" }].map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="border-b border-line-soft py-3.5 font-mono text-[11px] tracking-[0.2em] text-mist uppercase last:border-0 hover:text-foam"
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      </motion.div>
     </motion.header>
   );
 }

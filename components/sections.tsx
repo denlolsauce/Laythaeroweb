@@ -18,6 +18,7 @@ function SectionLabel({ index, children }: { index: string; children: string }) 
 
 const TICKER = [
   "PERSISTENT ISR",
+  "AUTONOMOUS SWARMING",
   "DECK-INDEPENDENT LAUNCH",
   "GPS-DENIED NAVIGATION",
   "MULTI-SHIP TASKING",
@@ -137,7 +138,8 @@ export function Platform() {
                 Tern launches from a 12-metre rail or vertically from a helipad,
                 needs no runway, no catapult and no host-nation basing. A composite
                 airframe with a heavy-fuel engine gives it two days aloft on the
-                fuel already in a ship&rsquo;s tanks.
+                fuel already in a ship&rsquo;s tanks. Fly one, or fly twelve as a
+                single coordinated swarm.
               </p>
             </Reveal>
 
@@ -230,8 +232,8 @@ const CAPS = [
   },
   {
     n: "04",
-    t: "Distributed tasking",
-    d: "Any authorised vessel in the group can task any airframe. Command moves with the mission, not with the hardware.",
+    t: "Swarm tasking",
+    d: "Airframes fly as one distributed sensor. The swarm self-allocates a search area, closes coverage gaps and re-tasks in flight — any authorised vessel in the group can command it, and losing an aircraft degrades resolution rather than the mission.",
   },
 ];
 
@@ -274,7 +276,7 @@ export function Capability() {
 const STACK = [
   { k: "Perception", v: "Multi-sensor detection, classification and track formation at the edge." },
   { k: "Reasoning", v: "Mission autonomy that re-plans around weather, fuel and threat without a link." },
-  { k: "Coordination", v: "Airframes divide a search area between themselves and rejoin coverage gaps." },
+  { k: "Coordination", v: "Swarm consensus divides a search area between airframes and rejoins coverage gaps without an operator in the loop." },
   { k: "Assurance", v: "Deterministic flight envelope, logged decisions, human authority on every effect." },
 ];
 
@@ -292,9 +294,9 @@ export function Autonomy() {
             </h2>
             <p className="mt-8 text-[1.0625rem] leading-relaxed text-mist">
               Hull software runs the mission end to end — flight, sensing,
-              classification and coordination — with the link treated as a
+              classification and swarm coordination — with the link treated as a
               convenience rather than a dependency. Every airframe that joins the
-              group inherits the same stack on day one.
+              swarm inherits the same stack on day one.
             </p>
           </Reveal>
 
@@ -426,6 +428,15 @@ export function Contact() {
               <span className="absolute inset-0 -translate-y-full bg-signal-deep transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             </button>
           </form>
+          <p className="mt-8 text-[0.95rem] text-mist">
+            Or reach us directly at{" "}
+            <a
+              href="mailto:info@laythaero.com"
+              className="border-b border-signal/40 pb-0.5 font-mono text-[0.9rem] tracking-[0.06em] text-signal transition-colors hover:border-signal hover:text-foam"
+            >
+              info@laythaero.com
+            </a>
+          </p>
           <p className="mt-5 font-mono text-[9.5px] tracking-[0.16em] text-mist/50 uppercase">
             ITAR-controlled material shared only through approved channels
           </p>
@@ -450,7 +461,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-[0.9rem] leading-relaxed text-mist/80">
-              Persistent maritime surveillance, built for the open ocean.
+              Persistent maritime surveillance in autonomous swarms, built for the
+              open ocean.
             </p>
           </div>
 
@@ -458,7 +470,6 @@ export function Footer() {
             {[
               { h: "Platform", l: ["LA-1 Tern", "Payloads", "Ground segment"] },
               { h: "Company", l: ["About", "Careers", "Press"] },
-              { h: "Contact", l: ["Programmes", "Partners", "Media"] },
             ].map((col) => (
               <div key={col.h}>
                 <div className="mb-3.5 font-mono text-[9.5px] tracking-[0.2em] text-mist/60 uppercase">
@@ -478,6 +489,30 @@ export function Footer() {
                 </ul>
               </div>
             ))}
+
+            <div>
+              <div className="mb-3.5 font-mono text-[9.5px] tracking-[0.2em] text-mist/60 uppercase">
+                Contact
+              </div>
+              <ul className="space-y-2.5">
+                <li>
+                  <a
+                    href="mailto:info@laythaero.com"
+                    className="text-[0.9rem] text-mist transition-colors hover:text-signal"
+                  >
+                    info@laythaero.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-[0.9rem] text-mist transition-colors hover:text-signal"
+                  >
+                    Request a brief
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
