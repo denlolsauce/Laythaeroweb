@@ -82,16 +82,6 @@ export function Thesis() {
               defense budget.
             </p>
           </Reveal>
-          <Reveal delay={0.24}>
-            <div className="rule my-9" />
-            <p className="font-serif text-[1.35rem] leading-snug text-foam italic">
-              &ldquo;Deterrence is a function of what you can see. We are building
-              the layer that never blinks.&rdquo;
-            </p>
-            <p className="mt-4 font-mono text-[10px] tracking-[0.2em] text-mist/70 uppercase">
-              Layth Aero · Founding thesis
-            </p>
-          </Reveal>
         </div>
       </div>
     </section>

@@ -130,16 +130,6 @@
     text-wrap: balance;
   }
 
-  .rule {
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      var(--color-line) 0%,
-      var(--color-line) 55%,
-      transparent 100%
-    );
-  }
-
   .grain::after {
     content: "";
     position: absolute;
