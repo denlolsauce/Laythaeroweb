@@ -61,3 +61,34 @@ npx serve out                       # or any static file server
 
 Leave `BASE_PATH` unset for local dev, a user/org site
 (`<user>.github.io`), or a custom domain served from the root.
+
+### Custom domain
+
+Add the domain under Settings → Pages → Custom domain first, then create the
+DNS records. Because this repo publishes from a GitHub Actions workflow, no
+`CNAME` file is needed in the repo — GitHub ignores one if present.
+
+For an apex domain (`laythaero.com`), four `A` records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+and optionally four `AAAA` records for IPv6:
+
+```
+2606:50c0:8000::153
+2606:50c0:8001::153
+2606:50c0:8002::153
+2606:50c0:8003::153
+```
+
+For a `www` (or other) subdomain, use a single `CNAME` record pointing to
+`denlolsauce.github.io` instead.
+
+A custom domain serves from the root, so `configure-pages` resolves
+`BASE_PATH` to empty automatically — no config change required. Tick
+"Enforce HTTPS" once the certificate is issued.
