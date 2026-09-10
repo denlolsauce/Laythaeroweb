@@ -11,7 +11,7 @@ export function Contact() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(90%_120%_at_50%_120%,#0e2029_0%,#04070c_62%)]" />
       <div className="ocean-grid absolute inset-0 -z-10 animate-drift opacity-30 [mask-image:radial-gradient(circle_at_50%_100%,black,transparent_68%)]" />
 
-      <div className="mx-auto max-w-[1400px] px-6 py-32 lg:px-10 lg:py-44">
+      <div className="mx-auto max-w-[1400px] px-6 py-24 lg:px-10 lg:py-28">
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow mb-7">Engagement</p>
           <h2 className="display text-[clamp(2.1rem,5.4vw,4.2rem)] text-gradient-foam">
@@ -108,7 +108,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 font-mono text-[9.5px] tracking-[0.16em] text-mist/50 uppercase sm:flex-row sm:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-line pt-6 font-mono text-[9.5px] tracking-[0.16em] text-mist/50 uppercase sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Layth Aero. All rights reserved.</span>
           <span>Designed for those who hold station.</span>
         </div>

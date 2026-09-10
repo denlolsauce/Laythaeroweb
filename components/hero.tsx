@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { EASE, RevealWords } from "./motion";
-import { Radar } from "./radar";
+import { Swarm } from "./swarm";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,32 +31,19 @@ export function Hero() {
 
       <motion.div
         style={{ y: contentY, opacity: fade }}
-        className="mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-center px-6 pt-28 pb-16 lg:px-10"
+        className="mx-auto flex min-h-[100svh] max-w-[1400px] flex-col justify-center px-6 pt-24 pb-12 lg:px-10"
       >
         <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
           <div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="mb-8 flex items-center gap-3"
-            >
-              <span className="relative flex size-1.5">
-                <span className="absolute inset-0 animate-ping rounded-full bg-signal/70" />
-                <span className="relative size-1.5 rounded-full bg-signal" />
-              </span>
-              <span className="eyebrow">Maritime Domain Awareness</span>
-            </motion.div>
-
             <h1 className="display text-[clamp(2.6rem,7.4vw,5.6rem)]">
               <RevealWords
-                text="The ocean is too large to watch."
+                text="Live coverage,"
                 delay={0.2}
                 className="block text-gradient-foam"
               />
               <RevealWords
-                text="So we never stop watching it."
-                delay={0.55}
+                text="accurate detection."
+                delay={0.5}
                 className="mt-1 block font-serif italic text-signal/90"
               />
             </h1>
@@ -105,9 +92,9 @@ export function Hero() {
             transition={{ duration: 1.5, ease: EASE, delay: 0.7 }}
             className="relative mx-auto w-full max-w-[26rem] lg:max-w-none"
           >
-            <Radar />
+            <Swarm />
             <div className="mt-6 flex items-center justify-between border-t border-line pt-3 font-mono text-[9.5px] tracking-[0.18em] text-mist/70 uppercase">
-              <span>Sector 7 · Strait Transit</span>
+              <span>Sector 7 · Swarm on station</span>
               <span className="text-signal/80">Feed live</span>
             </div>
           </motion.div>

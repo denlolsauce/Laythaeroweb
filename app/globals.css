@@ -16,16 +16,9 @@
   --font-mono: var(--font-mono-jet), ui-monospace, "SF Mono", monospace;
   --font-serif: var(--font-serif-display), ui-serif, Georgia, serif;
 
-  --animate-sweep: sweep 6s linear infinite;
   --animate-drift: drift 26s ease-in-out infinite;
   --animate-pulse-ring: pulse-ring 4s ease-out infinite;
-  --animate-scan: scan 9s ease-in-out infinite;
 
-  @keyframes sweep {
-    to {
-      transform: rotate(360deg);
-    }
-  }
   @keyframes drift {
     0%,
     100% {
@@ -45,23 +38,6 @@
     }
     100% {
       transform: scale(1.9);
-      opacity: 0;
-    }
-  }
-  @keyframes scan {
-    0%,
-    100% {
-      transform: translateY(-40%);
-      opacity: 0;
-    }
-    12% {
-      opacity: 0.5;
-    }
-    50% {
-      transform: translateY(140%);
-      opacity: 0.5;
-    }
-    88% {
       opacity: 0;
     }
   }
