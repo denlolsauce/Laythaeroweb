@@ -22,7 +22,7 @@ const serif = Newsreader({
 });
 
 const description =
-  "Layth Aero builds long-endurance autonomous aircraft for persistent maritime surveillance — holding station over the world's most contested water.";
+  "Layth is a defense company building swarm VTOLs for maritime surveillance — autonomous aircraft holding station over the world's most contested water.";
 
 export const metadata: Metadata = {
   title: "Layth Aero — Persistent Maritime Surveillance",

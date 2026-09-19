@@ -98,7 +98,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-[0.9rem] text-mist transition-colors hover:text-signal"
                 >
                   Request a brief

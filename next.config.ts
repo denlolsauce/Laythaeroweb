@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   basePath,
+  // Expose basePath to client code for assets referenced outside next/image.
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
   // Pages has no image optimiser; harmless today, required if next/image is added.
   images: { unoptimized: true },
   // Emit /contact/index.html style paths so static hosting resolves them.
