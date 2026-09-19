@@ -24,14 +24,19 @@ pnpm build   # production build
 app/
   layout.tsx     fonts, metadata, viewport
   globals.css    design tokens, keyframes, utilities
-  page.tsx       section composition
+  page.tsx       Layth homepage (company, platform, capabilities, contact)
+  smenos/        Smenos swarm VTOL system product page
 components/
-  nav.tsx        sticky top bar (logo + Request Brief)
-  hero.tsx       parallax hero
+  nav.tsx        sticky top bar (logo, page links, Request Brief)
+  hero.tsx       parallax homepage hero
+  home-sections.tsx  company statement, Smenos teaser, capabilities
+  smenos-sections.tsx  product hero, mission sequence, specs
   swarm.tsx      animated drone swarm with comms mesh
   sections.tsx   contact, footer
   motion.tsx     shared reveal primitives
-  mark.tsx       logo mark
+  mark.tsx       lion mark — eyes, nose, mouth (no mane)
+public/
+  smenos-logo.gif  animated Smenos emblem
 ```
 
 The contact form is presentational only — no backend is wired up; the

@@ -54,10 +54,11 @@ export function Hero() {
               transition={{ duration: 1, ease: EASE, delay: 1.1 }}
               className="mt-9 max-w-xl text-[1.0625rem] leading-relaxed text-mist"
             >
-              Layth Aero builds long-endurance autonomous aircraft that launch from
+              Layth is a defense company building swarm VTOLs for maritime
+              surveillance — long-endurance autonomous aircraft that launch from
               the deck of any vessel and operate in coordinated swarms, holding
-              station for days — turning open water into a monitored, understood,
-              and defensible domain.
+              station for days and turning open water into a monitored,
+              understood, and defensible domain.
             </motion.p>
 
             <motion.div
